@@ -1,0 +1,25 @@
+{
+  "name": "cytoscape.js-extension-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:esm": "CREATE_ESM=true rollup -c",
+    "build:cjs": "CREATE_CJS=true rollup -c",
+    "build:umd": "CREATE_UMD=true rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-terser": "^0.4.3",
+    "rollup": "^3.29.4"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1"
+  }
+}
