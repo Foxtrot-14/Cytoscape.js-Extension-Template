@@ -1,12 +1,13 @@
 import nodeResolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
+import terser from "@rollup/plugin-terser";
 const createEsm = process.env.CREATE_ESM === "true";
 const createCjs = process.env.CREATE_CJS === "true";
 const createUmd = process.env.CREATE_UMD === "true";
 const input = "src/index.js"; // Update with your entry point
 const outputDir = "dist"; // Update with your desired output directory
-const name = "cytoscape";//name your extension
+const name = "cytoscape"; //name your extension
 const configs = [];
 
 if (createEsm) {
