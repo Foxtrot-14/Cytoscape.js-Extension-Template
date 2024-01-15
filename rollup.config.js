@@ -7,14 +7,14 @@ const createCjs = process.env.CREATE_CJS === "true";
 const createUmd = process.env.CREATE_UMD === "true";
 const input = "src/index.js"; // Update with your entry point
 const outputDir = "dist"; // Update with your desired output directory
-const name = "cytoscape"; //name your extension
+const name = "cytoscape.js-extension-template"; //name your extension
 const configs = [];
 
 if (createEsm) {
   configs.push({
     input,
     output: {
-      file: `${outputDir}/cytoscape.esm.js`,
+      file: `${outputDir}/${name}.esm.js`,
       format: "es",
     },
     plugins: [
@@ -30,7 +30,7 @@ if (createCjs) {
   configs.push({
     input,
     output: {
-      file: `${outputDir}/cytoscape.cjs.js`,
+      file: `${outputDir}/${name}.cjs.js`,
       format: "cjs",
     },
     plugins: [
@@ -46,7 +46,7 @@ if (createUmd) {
   configs.push({
     input,
     output: {
-      file: `${outputDir}/cytoscape.umd.js`,
+      file: `${outputDir}/${name}.umd.js`,
       format: "umd",
       name: name,
     },
@@ -62,7 +62,7 @@ if (createUmd) {
 configs.push({
   input,
   output: {
-    file: `${outputDir}/cytoscape-automove.umd.min.js`,
+    file: `${outputDir}/${name}.umd.min.js`,
     format: "umd",
     name: name,
   },
@@ -78,7 +78,7 @@ configs.push({
 configs.push({
   input,
   output: {
-    file: `${outputDir}/cytoscape-automove.esm.min.js`,
+    file: `${outputDir}/${name}.esm.min.js`,
     format: "esm",
     name: name,
   },

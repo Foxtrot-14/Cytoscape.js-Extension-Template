@@ -2,7 +2,9 @@
   "name": "cytoscape.js-extension-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cytoscape.js-extension-template.cjs.js",
+  "module": "dist/cytoscape.js-extension-template.esm.js",
+  "browser": "dist/cytoscape.js-extension-template.umd.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
